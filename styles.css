@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+--veryDarkBlueMainBackground: hsl(233, 47%, 7%);
+--darkDesaturatedBlueCardBackground: hsl(244, 38%, 16%);
+--softViolet: hsl(277, 64%, 61%);
+--white: hsl(0, 0%, 100%);
+--slightlyTransparentWhiteMainParagraph: hsla(0, 0%, 100%, 0.75);
+--slightlyTransparentWhiteStatHadings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+    gap: 24px;
+    }
+
+.card{
+    background-color: var(--darkDesaturatedBlueCardBackground);
+    width: 330px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.card__details{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.card__image__background{
+
+    height: 240px;
+    background-color: var(--softViolet);
+    opacity: .6;
+} 
+.card__image{
+    background-image: url(./images/image-header-mobile.jpg);
+    height: 240px;
+    background-size: contain;
+    
+}
+
+h1{
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+}
+
+h1 span{
+    color: var(--softViolet);
+}
+
+.card__details__paragraph{
+    color: var(--slightlyTransparentWhiteMainParagraph);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+
+}
+
+.card__details__stats__company,
+.card__details__stats__template,
+.card__details__stats__query{
+    line-height: 2px;
+    padding: 4px;
+}
+
+.card__details__stats{
+    width: 50%;
+    margin: 0 auto 12px;
+}
+
+.card__details__stats__numbers{
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.card__details__stats__name{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--slightlyTransparentWhiteStatHadings);
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*----------DESKTOP--------------*/
+@media (min-width:720px) {
+    .card{
+        width: 1000px;
+        height: 400px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+    }
+    .card__image{
+        background-image: url(./images/image-header-desktop.jpg);
+        height: 400px;
+        background-size: cover;
+        width: 45%;
+    }
+
+    .card__image__background{
+        height: 400px;
+    } 
+
+    .card__details{
+        width: 45%;
+        margin: 12px auto;
+        text-align: left;
+        align-items: center;
+    }
+
+    .card__details__paragraph{
+        width: 90%;
+    }
+
+    .card__details__stats{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin:50px 0;
+    }
+
+}
